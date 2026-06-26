@@ -212,11 +212,7 @@ This project demonstrates:
 ---
 
 ## 🌐 Deployment
-
-| Layer | Platform |
-|-------|----------|
-| Backend | [Render](https://render.com) |
-| Frontend | [Vercel](https://vercel.com) |
+if you want to try it ( https://global-info-chatbot.vercel.app/ )
 
 ---
 
