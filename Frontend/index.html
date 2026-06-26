@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GlobalInfo Chatbot — Ask questions about any country: capitals, populations, currencies, languages, and more." />
+  <title>GlobalInfo Chatbot 🌍</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       App Shell
+  ============================================================ -->
+  <div class="app-shell">
+
+    <!-- ---- Sidebar ---- -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">🌍</span>
+          <span class="logo-text">GlobalInfo</span>
+        </div>
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+          <span class="toggle-icon">‹</span>
+        </button>
+      </div>
+
+      <div class="sidebar-body">
+        <p class="sidebar-label">Quick Queries</p>
+        <div class="chip-list" id="chip-list">
+          <button class="chip" data-query="Tell me about Japan">🇯🇵 Japan overview</button>
+          <button class="chip" data-query="Capital of France">🏛️ Capital of France</button>
+          <button class="chip" data-query="Population of India">👥 Population of India</button>
+          <button class="chip" data-query="Currency of Egypt">💰 Currency of Egypt</button>
+          <button class="chip" data-query="Languages spoken in Switzerland">🗣️ Languages in Switzerland</button>
+          <button class="chip" data-query="What is the area of Russia?">📐 Area of Russia</button>
+          <button class="chip" data-query="Borders of Germany">🤝 Borders of Germany</button>
+          <button class="chip" data-query="Timezone of Australia">⏰ Timezone of Australia</button>
+          <button class="chip" data-query="Where is Brazil located?">🌍 Region of Brazil</button>
+          <button class="chip" data-query="Flag of Canada">🏳️ Flag of Canada</button>
+          <button class="chip" data-query="Calling code of South Korea">📞 Calling code — Korea</button>
+          <button class="chip" data-query="Tell me about Saudi Arabia">🇸🇦 Saudi Arabia overview</button>
+        </div>
+
+        <div class="sidebar-footer">
+          <p class="powered-by">Powered by <a href="https://restcountries.com" target="_blank" rel="noopener">REST Countries API</a></p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ---- Main Chat Area ---- -->
+    <main class="chat-area">
+
+      <!-- Top bar -->
+      <header class="chat-header">
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">☰</button>
+        <div class="chat-title">
+          <span class="chat-title-icon">🌍</span>
+          <div>
+            <h1 class="chat-title-text">GlobalInfo Chatbot</h1>
+            <p class="chat-subtitle">Ask me anything about any country</p>
+          </div>
+        </div>
+        <button class="clear-btn" id="clear-btn" title="Clear chat">
+          <span>🗑️</span>
+        </button>
+      </header>
+
+      <!-- Messages -->
+      <section class="messages-container" id="messages-container" role="log" aria-live="polite" aria-label="Chat messages">
+
+        <!-- Welcome card (shown until user sends first message) -->
+        <div class="welcome-card" id="welcome-card">
+          <div class="welcome-globe">🌍</div>
+          <h2 class="welcome-title">Welcome to GlobalInfo!</h2>
+          <p class="welcome-desc">
+            Your AI-powered world knowledge assistant. Ask me about any country —
+            capitals, populations, currencies, languages, borders, and much more.
+          </p>
+          <div class="welcome-examples">
+            <span class="example-tag" data-query="Tell me about Japan">Tell me about Japan</span>
+            <span class="example-tag" data-query="Capital of France">Capital of France</span>
+            <span class="example-tag" data-query="Currency of Egypt">Currency of Egypt</span>
+            <span class="example-tag" data-query="Languages in Canada">Languages in Canada</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Typing indicator (hidden by default) -->
+      <div class="typing-wrapper" id="typing-wrapper" aria-hidden="true">
+        <div class="typing-indicator">
+          <span></span><span></span><span></span>
+        </div>
+        <p class="typing-label">GlobalInfo is thinking…</p>
+      </div>
+
+      <!-- Input bar -->
+      <footer class="input-bar">
+        <div class="input-wrapper">
+          <textarea
+            id="user-input"
+            class="user-input"
+            placeholder="Ask about any country… (e.g. Tell me about Japan)"
+            rows="1"
+            maxlength="500"
+            aria-label="Chat input"
+          ></textarea>
+          <button class="send-btn" id="send-btn" aria-label="Send message" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="input-hint">Press <kbd>Enter</kbd> to send &nbsp;·&nbsp; <kbd>Shift+Enter</kbd> for new line</p>
+      </footer>
+
+    </main>
+  </div><!-- /.app-shell -->
+
+  <script src="script.js"></script>
+</body>
+</html>
