@@ -216,19 +216,7 @@ This project demonstrates:
 | Layer | Platform |
 |-------|----------|
 | Backend | [Render](https://render.com) |
-| Frontend | [Vercel](https://vercel.com) or [Netlify](https://netlify.com) |
-
----
-
-## 📸 Screenshots
-
-> _Add project screenshots here._
-
-**Home Page**
-<!-- ![Home Page](screenshots/home.png) -->
-
-**Chat Example**
-<!-- ![Chat Example](screenshots/chat.png) -->
+| Frontend | [Vercel](https://vercel.com) |
 
 ---
 
