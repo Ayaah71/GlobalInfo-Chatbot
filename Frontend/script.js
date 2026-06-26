@@ -2,19 +2,19 @@
    GlobalInfo Chatbot — Frontend Logic
    ============================================================ */
 
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = 'globalinfo-chatbot-production.up.railway.app';
 
 // DOM refs
 const messagesContainer = document.getElementById('messages-container');
-const welcomeCard       = document.getElementById('welcome-card');
-const userInput         = document.getElementById('user-input');
-const sendBtn           = document.getElementById('send-btn');
-const typingWrapper     = document.getElementById('typing-wrapper');
-const clearBtn          = document.getElementById('clear-btn');
-const chipList          = document.getElementById('chip-list');
-const sidebar           = document.getElementById('sidebar');
-const sidebarToggle     = document.getElementById('sidebar-toggle');
-const mobileMenuBtn     = document.getElementById('mobile-menu-btn');
+const welcomeCard = document.getElementById('welcome-card');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
+const typingWrapper = document.getElementById('typing-wrapper');
+const clearBtn = document.getElementById('clear-btn');
+const chipList = document.getElementById('chip-list');
+const sidebar = document.getElementById('sidebar');
+const sidebarToggle = document.getElementById('sidebar-toggle');
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 
 // State
 let isWaitingForResponse = false;
