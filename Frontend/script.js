@@ -2,7 +2,7 @@
    GlobalInfo Chatbot — Frontend Logic
    ============================================================ */
 
-const API_BASE = 'globalinfo-chatbot-production.up.railway.app';
+const API_BASE = 'https://globalinfo-chatbot-production.up.railway.app';
 
 // DOM refs
 const messagesContainer = document.getElementById('messages-container');
